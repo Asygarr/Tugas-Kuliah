@@ -13,13 +13,13 @@ public class Stack {
         toples.push(15);
         
         toples.tampil();
-        data = 19;
+        data = 18;
         toples.push(data);
         
         System.out.println();
         toples.tampil();
         
-        data = 23;
+        data = 25;
         toples.push(data);
         System.out.println();
         toples.tampil();
