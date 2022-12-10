@@ -1,30 +1,22 @@
 package tugas;
 
+import java.util.Scanner;
+
 public class Stack {
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         int data; //variabel luar stack 
         StackClass toples = new StackClass();
 
         System.out.println("<<<< MEMASUKKAN DATA >>>>");
-        toples.push(5);
-        toples.push(6);
-        toples.push(3);
-        toples.push(15);
-        
-        toples.tampil();
-        data = 18;
-        toples.push(data);
-        
-        System.out.println();
-        toples.tampil();
-        
-        data = 25;
-        toples.push(data);
-        System.out.println();
+        for (int i = 0; i < 5; i++){
+            System.out.print("Maukkan data : ");data = input.nextInt();
+            toples.push(data);
+        }
+        System.out.print("DATA : ");
         toples.tampil();
 
-        toples.push(25);
         System.out.println();
         System.out.println("\n<<<< MENGELUARKAN DATA >>>>");
         toples.tampil();
@@ -37,6 +29,10 @@ public class Stack {
         System.out.println();
         toples.tampil();
         
+        toples.pop();
+        System.out.println();
+        toples.tampil();
+
         toples.pop();
         System.out.println();
         toples.tampil();
