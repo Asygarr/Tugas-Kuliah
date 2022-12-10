@@ -10,14 +10,14 @@ public class StackClass {
     }
     public int pop () {
         int data;//sediakan 1 variabel untuk menampung data yang dikeluarkan dari Stack
-        top--;// kurangi top
+        top--;// kurangi top terlebih dahulu
         data = stack[top];//keluarkan isi top dan masukkan ke dalam variabel data
         System.out.print("   data yang akan dikeluarkan : "+data);
         return data;
     }
     
     public void tampil() {
-       for(int i = top-1;i>=0;i--) {
+       for(int i = top-1;i>=0;i--) { //input menggunakan looping
            System.out.print(stack[i]+" ");
        }
     }
