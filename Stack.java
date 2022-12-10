@@ -21,22 +21,11 @@ public class Stack {
         System.out.println("\n<<<< MENGELUARKAN DATA >>>>");
         toples.tampil();
 
-        toples.pop();
-        System.out.println();
-        toples.tampil();
-
-        toples.pop();
-        System.out.println();
-        toples.tampil();
-        
-        toples.pop();
-        System.out.println();
-        toples.tampil();
-
-        toples.pop();
-        System.out.println();
-        toples.tampil();
-            
+        for (int i=0;i<4;i++) {
+            toples.pop();
+            System.out.println();
+            toples.tampil();
+        }
     }
     
 }
