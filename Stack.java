@@ -12,7 +12,7 @@ public class Stack {
         char[] abjad;
 
         System.out.println("<<<< MEMASUKKAN DATA >>>>");
-        data = "BUKU TULIS KAKAK";
+        data = "BUKU TULIS";
         System.out.print("Kata : "+data+"\n");
         n = data.length();
         abjad = data.toCharArray();
