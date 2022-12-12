@@ -1,4 +1,4 @@
-package tugas;
+package tugas.serach;
 
 import java.util.Random;
 
