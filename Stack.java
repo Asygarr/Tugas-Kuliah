@@ -8,7 +8,7 @@ public class Stack {
         StackClass toples2 = new StackClass();
         String data;
         int n;
-        char piring1, flags = ' '; char[] huruf;
+        char piring, flags = ' '; char[] huruf;
 
         System.out.println("<<<< MEMASUKKAN DATA >>>>");
         data = "BUKU TULIS";
@@ -25,7 +25,7 @@ public class Stack {
 
         System.out.print("Hasil 2 : ");
         for (int i = 0; i < n; i++){
-            piring1 = toples1.pop();
+            piring = toples1.pop();
 
             // Mengisi space terlebih dahulu
             if (i == 0) {
@@ -33,7 +33,7 @@ public class Stack {
             }
 
             // Penukaran kata
-            if (piring1 == flags) {
+            if (piring == flags) {
                 toples2.tampil(); // Menampilkan kata pertama
 
                 // Menghapus isi di toples 2
@@ -42,15 +42,15 @@ public class Stack {
                 }
 
                 // Mengisi kata ke-2 di toples 2
-                toples2.push(piring1);
+                toples2.push(piring);
                 for (int j = i+1; j < n; j++){
-                    piring1 = toples1.pop();
-                    toples2.push(piring1);
+                    piring = toples1.pop();
+                    toples2.push(piring);
                 }
                 toples2.tampil(); // Menampilkan kata kedua
                 break; // Berhenti loop
             } else {
-                toples2.push(piring1); // Mengisi kata pertama di toples 2
+                toples2.push(piring); // Mengisi kata pertama di toples 2
             }
         }
 
