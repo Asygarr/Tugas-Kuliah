@@ -7,6 +7,7 @@ public class Stack {
         StackClass toples1 = new StackClass();
         StackClass toples2 = new StackClass();
         StackClass toples3 = new StackClass();
+        StackClass toples4 = new StackClass();
         String data;
         int n, tanda = 0;
         char piring, flags = ' '; char[] huruf;
@@ -24,19 +25,29 @@ public class Stack {
         System.out.print("Hasil 1 : ");toples1.tampil();
         System.out.println();
 
-        /*while (true) {
+        System.out.print("Hasil 2 : ");
+        while (true) {
             tanda++;
             piring = toples1.pop();
-            if (piring == flags){
-                for (int i = tanda; i < n; i++){
+            if (tanda == 1){
+                toples2.push(flags);
+            } if (piring == flags){
+                toples2.tampil();
+                while (true) {
+                    tanda++;
                     toples3.push(toples1.pop());
-                } break;
+                    if (tanda == n) {
+                        toples3.tampil();
+                        break;
+                    }
+                }
+                break;
             } else {
                 toples2.push(piring);
             }
-        }*/
+        }
 
-        for (int i = 0; i < n; i++){
+        /*for (int i = 0; i < n; i++){
             tanda++;
             piring = toples1.pop();
             if (i == 0){
@@ -49,11 +60,7 @@ public class Stack {
             } else {
                 toples2.push(piring);
             }
-        }
-
-        System.out.print("Hasil 2 : ");
-        toples2.tampil();
-        toples3.tampil();
+        }*/
 
         System.out.println();
     }
