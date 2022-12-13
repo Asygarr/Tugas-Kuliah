@@ -10,10 +10,10 @@ public class Stack {
         StackClass toples4 = new StackClass();
         String data;
         int n, tanda = 0;
-        char piring, flags = ' '; char[] huruf;
+        char piring1, piring2, piring3, flags = ' '; char[] huruf;
 
         System.out.println("<<<< MEMASUKKAN DATA >>>>");
-        data = "BUKU TULIS";
+        data = "BUKU TULIS YUI";
         System.out.print("Kata : "+data+"\n");
         n = data.length();
         huruf = data.toCharArray();
@@ -23,27 +23,39 @@ public class Stack {
             toples1.push(huruf[i]);
         }
         System.out.print("Hasil 1 : ");toples1.tampil();
-        System.out.println();
 
         System.out.print("Hasil 2 : ");
         while (true) {
-            tanda++;
-            piring = toples1.pop();
+            tanda+=1; //Parameter untuk menghentikan looping
+            piring1 = toples1.pop(); //Penampung data yang dikeluarkan
             if (tanda == 1){
-                toples2.push(flags);
-            } if (piring == flags){
-                toples2.tampil();
-                while (true) {
-                    tanda++;
-                    toples3.push(toples1.pop());
-                    if (tanda == n) {
-                        toples3.tampil();
+                toples2.push(flags); //Mengisi space terlebih dahulu pada pengeluara pertama
+            } if (piring1 == flags){ //Tanda pergantian push toples
+                toples2.tampil(); //Output : YUI
+                toples3.push(piring1); //Mengisi space terlebih dahulu
+                while (true){
+                    tanda+=1; //Parameter untuk menghentikan looping
+                    piring2 = toples1.pop(); //Penampung data yang dikeluarkan
+                    if (piring2 == flags) { //Tanda pergantian push toples
+                        toples3.tampil(); //Output : TULIS
+                        toples4.push(piring2); //Mengisi space terlebih dahulu
+                        while (true) {
+                            tanda+=1; //Parameter untuk menghentikan looping
+                            piring3 = toples1.pop(); //Penampung data yang dikeluarkan
+                            toples4.push(piring3); //Push
+                            if (tanda == n) { //Menghentikan semua looping
+                                toples4.tampil(); //Output : BUKU
+                                break;
+                            }
+                        }
                         break;
+                    } else {
+                        toples3.push(piring2); //Push
                     }
                 }
                 break;
             } else {
-                toples2.push(piring);
+                toples2.push(piring1); //Push
             }
         }
 
