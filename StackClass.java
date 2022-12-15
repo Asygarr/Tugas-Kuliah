@@ -1,7 +1,7 @@
 package tugas;
 
 public class StackClass {
-    char stack[] = new char[2000];//isi Stack harus dalam bentuk Tipe Array
+    char[] stack = new char[2000];//isi Stack harus dalam bentuk Tipe Array
     int top; //deklarasi variabel top
     
     public void push (char angka) {
