@@ -11,7 +11,7 @@ public class Stack {
         char piring, flags = ' '; char[] huruf;
 
         System.out.println("<<<< MEMASUKKAN DATA >>>>");
-        data = "BUKU TULIS";
+        data = "BUKU TULIS YUI";
         System.out.print("Kata : "+data+"\n");
         n = data.length();
         huruf = data.toCharArray();
@@ -43,9 +43,27 @@ public class Stack {
                 toples2.push(piring); // Mengisi space untuk kata kedua
                 for (int j = i+1; j < n; j++){
                     piring = toples1.pop();
-                    toples2.push(piring); // Push kata kedua
+
+                    // Penukaran kata
+                    if (piring == flags) {
+                        toples2.tampil(); // Menampilkan kata kedua
+
+                        // Menghapus kata kedua tadi di dalam toples
+                        for (int k = j; k >= i+1; k--){
+                            toples2.pop();
+                        }
+
+                        toples2.push(piring); // Mengisi space untuk kata ketiga
+                        for (int k = j+1; k < n; k++){
+                            piring = toples1.pop();
+                            toples2.push(piring); // Push kata ketiga
+                        }
+                        toples2.tampil(); // Menampilkan kata ketiga
+                        break;
+                    } else {
+                        toples2.push(piring); // Push kata kedua
+                    }
                 }
-                toples2.tampil(); // Menampilkan kata ke dua
                 break;
             } else {
                 toples2.push(piring); // Push kata pertama
