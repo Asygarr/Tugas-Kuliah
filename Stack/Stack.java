@@ -1,4 +1,4 @@
-package tugas;
+package tugas.Stack;
 
 
 public class Stack {
@@ -58,7 +58,7 @@ public class Stack {
                             piring = toples1.pop();
                             toples2.push(piring); // Push kata ketiga
                         }
-                        toples2.tampil(); // Menampilkan kata kedua
+                        toples2.tampil(); // Menampilkan kata ketiga
                         break;
                     } else {
                         toples2.push(piring); // Push kata kedua

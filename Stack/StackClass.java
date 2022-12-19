@@ -1,4 +1,4 @@
-package tugas;
+package tugas.Stack;
 
 public class StackClass {
     char[] stack = new char[2000];//isi Stack harus dalam bentuk Tipe Array
