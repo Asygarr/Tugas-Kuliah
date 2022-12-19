@@ -25,9 +25,8 @@ public class Stack {
 
         System.out.print("Toples 2 : ");
         for (int i = 0; i < n; i++){
-            piring = toples1.pop();
-
             // Mengisi space untuk kata pertama
+            piring = toples1.pop();
             if (i == 0) {
                 toples2.push(flags);
             }
@@ -36,7 +35,7 @@ public class Stack {
             if (piring == flags) {
                 toples2.tampil(); // Menampilkan kata pertama
 
-                // Menghapus kata pertama
+                // Menghapus kata pertama tadi di dalam toples
                 for (int j = i; j >= 0; j--){
                     toples2.pop();
                 }
@@ -44,9 +43,9 @@ public class Stack {
                 toples2.push(piring); // Mengisi space untuk kata kedua
                 for (int j = i+1; j < n; j++){
                     piring = toples1.pop();
-                    toples2.push(piring);
+                    toples2.push(piring); // Push kata kedua
                 }
-                toples2.tampil(); // Menampilkan kata kedua
+                toples2.tampil(); // Menampilkan kata ke dua
                 break;
             } else {
                 toples2.push(piring); // Push kata pertama
