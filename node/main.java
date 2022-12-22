@@ -14,6 +14,7 @@ public class main {
 
         // Tugas
         rantai.tengah_urut(7);
+        rantai.tengah_urut(3);
         
         rantai.tampil();
     }
