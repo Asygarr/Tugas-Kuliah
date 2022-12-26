@@ -30,6 +30,7 @@ public class main {
         System.out.print("10 : ");
         rantai.tengah_urut(10);
         rantai.tampil();
+
     }
     
 }

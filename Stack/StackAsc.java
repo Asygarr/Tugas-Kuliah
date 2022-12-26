@@ -9,9 +9,8 @@ public class StackAsc {
         StackClass2 toples1 = new StackClass2();
         StackClass2 toples2 = new StackClass2();
         StackClass2 toples3 = new StackClass2();
-        int piring, top = 0, z = 0, temp, n1 = 0, n2 = 0;
-        int[] angka = {2, 3, 1, 5, 4};
-        int[] piring1 = new int[1000], piring2 = new int[1000];
+        int piring, temp, top2 = 0, top3 = 0, pr2 = 0, pr3 = 0, n2 = 0, n3 = 0;
+        int[] angka = {3, 1, 5, 2, 4};
         int n = angka.length;
 
         // Data awal
@@ -24,37 +23,37 @@ public class StackAsc {
         System.out.print("Toples 1 : ");toples1.tampil();
         System.out.println();
 
-
         for (int i = 0; i < n; i++){
             piring = toples1.pop();
             if (i == 0) {
                 toples2.push(piring);
-                top = piring;
-                n1++;
+                top2 = piring;
+                n2++;
             } else {
-                if (piring > top) {
-                    if (piring > z) {
-                        temp = z;
+                if (piring > top2) {
+                    if (piring > top3) {
+                        temp = top3;
                         toples3.push(piring);
                         if (temp != 0) {
                             toples3.push(temp);
                         }
-                        z = piring;
+                        top3 = piring;
                     } else {
                         toples3.push(piring);
                     }
-                    n2++;
+                    n3++;
                 } else {
                     toples2.push(piring);
-                    top = piring;
-                    n1++;
+                    top2 = piring;
+                    n2++;
                 }
             }
 
         }
-
-        toples2.tampil();
         System.out.println();
-        toples3.tampil();
+        System.out.print("Toples 2 : "); toples2.tampil();
+        System.out.print("\nToples 3 : "); toples3.tampil();
+
+        System.out.println("\n\nTAMPILKAN PENGURUTAN : ? ");
     }
 }
