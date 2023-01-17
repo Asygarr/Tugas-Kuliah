@@ -35,12 +35,8 @@ public class SelectionSort {
             }
             data[posisi]=data[i];//4
             data[i]=temp;//2
-            for (int a = 0; a < data.length; a++){
-                System.out.println("\n Proses : ");
-                System.out.println(a +" : "+ data[a]);
-            }
-            System.out.println();
         }
+        System.out.println();
 
         // Output akhir
         System.out.println("Tampilan data akhir : ");

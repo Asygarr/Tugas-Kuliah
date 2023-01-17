@@ -6,7 +6,7 @@ public class BinerySearch {
         int data = 225; char ascii = 0; char[] huruf = new char[1000];
         int mid = (data-1)/2;
 
-        char pilihan = 78;
+        char pilihan = 78; // Mencari huruf N
 
         // Data
         for (int i = 0; i < data; i++){

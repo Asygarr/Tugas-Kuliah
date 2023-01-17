@@ -15,7 +15,7 @@ public class SequentialSearch {
 
         // Random Indeks
         for (int i = 0; i < data; i++) {
-            indeks[i] = random.nextInt(5);
+            indeks[i] = random.nextInt(3);
         }
 
         // Pemanggilan Method Function
@@ -25,13 +25,13 @@ public class SequentialSearch {
     // Proses Data
     private static void Data (int data, int[] indeks, String[] piring, String pilihan){
         for (int i = 0; i < data; i++) {
-            if (i == indeks[0] || i == indeks[1]) {
+            if (i == indeks[0]) {
                 piring[i] = "Piring Kaca";
             }
-            if (i == indeks[2] || i == indeks[3]) {
+            if (i == indeks[1]) {
                 piring[i] = "Piring Aluminium";
             }
-            if (i == indeks[4]) {
+            if (i == indeks[2]) {
                 piring[i] = "Piring Plastik";
             }
         }
